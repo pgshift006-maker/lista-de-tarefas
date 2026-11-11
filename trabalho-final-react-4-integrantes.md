@@ -97,6 +97,56 @@ src/
 histórico do repositório mostra quem fez cada parte, o que reforça a explicação de
 cada um na apresentação.
 
+### Como o grupo usa o Git
+
+A `main` é a versão oficial do projeto. **Ninguém trabalha direto nela**: cada um
+trabalha na própria branch, e o Pedro junta tudo na `main`.
+
+**1. Commit principal (Pedro, na `main`).** O Pedro cria o projeto React com as
+5 páginas ainda vazias, as rotas no `App.tsx` e o tipo `types/Tarefa.ts`. Assim
+cada um já tem o próprio arquivo esperando, e ninguém precisa mexer no `App.tsx`,
+que é o arquivo que mais daria conflito.
+
+**2. Cada um na sua branch.** Depois que o commit principal estiver no GitHub:
+
+| Integrante | Branch |
+|---|---|
+| Pedro | `pedro-estrutura` |
+| Amanda | `amanda-login` |
+| Marlon | `marlon-lista` |
+| Erasmo | `erasmo-nova-tarefa` |
+
+```
+git clone https://github.com/pgshift006-maker/lista-de-tarefas.git
+cd lista-de-tarefas
+npm install
+git checkout -b amanda-login        (troque pelo nome da sua branch)
+```
+
+Depois de trabalhar:
+
+```
+git add .
+git commit -m "o que você fez, em uma frase"
+git push -u origin amanda-login     (só o primeiro push precisa do -u)
+```
+
+**3. Juntar na `main`.** No GitHub, cada um abre um **Pull Request** da sua branch
+para a `main`. O Pedro confere e aprova (*Merge*).
+
+**4. Pegar o que os outros fizeram.** Quando algo novo entrar na `main`, cada um
+atualiza a própria branch:
+
+```
+git checkout main
+git pull
+git checkout amanda-login
+git merge main
+```
+
+**Regra para não dar conflito:** cada um mexe só nos próprios arquivos. Se precisar
+mudar arquivo de outra pessoa (o `App.tsx`, o `Tarefa.ts`), avisa no grupo antes.
+
 ---
 
 ## Apresentação: 15 minutos, com os 4 participando
