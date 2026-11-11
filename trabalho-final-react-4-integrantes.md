@@ -6,7 +6,7 @@
 **Tema:** informar até 20 de outubro
 **Conclusão do trabalho:** prazo máximo até 17 de novembro
 
-**Grupo:** Pedro, Amanda, Marlom e Erasmo
+**Grupo:** Pedro, Amanda, Marlon e Erasmo
 **Tema escolhido:** Lista de tarefas
 **Repositório:** https://github.com/pgshift006-maker/lista-de-tarefas
 
@@ -27,7 +27,7 @@ O tema da aplicação é escolhido pelo grupo e precisa atender aos requisitos m
 
 ## Composição do grupo
 
-- **4 integrantes:** Pedro, Amanda, Marlom e Erasmo.
+- **4 integrantes:** Pedro, Amanda, Marlon e Erasmo.
 - Cada integrante cria e explica **2 componentes funcionais**, o que dá **8 componentes** no total.
 - **8 é exatamente o mínimo exigido.** Com 4 pessoas não sobra folga: se um único
   componente não ficar pronto, o grupo fica abaixo do mínimo. O projeto pode ter
@@ -66,17 +66,17 @@ uma sugestão: troquem as partes entre vocês se fizer mais sentido.
 |---|---|---|---|---|
 | **Pedro** | Estrutura e navegação | `Navbar`, `Footer` | Home, Sobre e a configuração das rotas | `useState` (abrir e fechar o menu) |
 | **Amanda** | Login e sessão | `LoginForm`, `RotaProtegida` | Login | `useContext` (contexto de autenticação: só quem entrou vê as tarefas) |
-| **Marlom** | Lista de tarefas | `ListaTarefas`, `ItemTarefa` | Tarefas | `useEffect` (carregar as tarefas) e `useMemo` (filtro todas / pendentes / concluídas e o contador) |
+| **Marlon** | Lista de tarefas | `ListaTarefas`, `ItemTarefa` | Tarefas | `useEffect` (carregar as tarefas) e `useMemo` (filtro todas / pendentes / concluídas e o contador) |
 | **Erasmo** | Criar tarefa | `FormTarefa`, `ModalConfirmacao` | Nova tarefa | `useRef` (foco no campo do título) e um hook próprio, `useLocalStorage` (salvar as tarefas no navegador para não sumirem ao recarregar) |
 
 O `ModalConfirmacao` do Erasmo também serve para confirmar a exclusão de uma tarefa
-na lista do Marlom.
+na lista do Marlon.
 
 Com essa divisão o projeto usa **6 hooks diferentes**, dois acima do mínimo. Se um
 deles não ficar pronto a tempo, o grupo continua cumprindo a exigência de 4.
 
 **Ponto extra (API):** se o grupo for atrás do +1,0, quem assume naturalmente é
-Marlom, porque o `useEffect` da página Tarefas já é o lugar onde os dados chegam.
+Marlon, porque o `useEffect` da página Tarefas já é o lugar onde os dados chegam.
 Basta trocar o armazenamento no navegador por um JSON Server ou pelo Firebase.
 Nesse caso o `useLocalStorage` passa a guardar só o filtro escolhido, e o hook
 continua contando.
@@ -106,7 +106,7 @@ cada um na apresentação.
 | 0:00 – 1:00 | Pedro | Tema, objetivo do sistema e tecnologias usadas |
 | 1:00 – 4:00 | Pedro | Navegação entre as páginas, rotas, `Navbar`, `Footer` e `useState` |
 | 4:00 – 7:00 | Amanda | Login funcionando, `LoginForm`, `RotaProtegida` e `useContext` |
-| 7:00 – 10:00 | Marlom | Página Tarefas, `ListaTarefas`, `ItemTarefa`, `useEffect`, `useMemo` (e a API, se houver) |
+| 7:00 – 10:00 | Marlon | Página Tarefas, `ListaTarefas`, `ItemTarefa`, `useEffect`, `useMemo` (e a API, se houver) |
 | 10:00 – 13:00 | Erasmo | Página Nova tarefa, `FormTarefa`, `ModalConfirmacao`, `useRef` e `useLocalStorage` |
 | 13:00 – 15:00 | Todos | Uso completo do sistema do começo ao fim, deploy (se houver) e perguntas |
 
@@ -122,7 +122,7 @@ link do YouTube.
 
 - [ ] Repositório **público** no GitHub com o código-fonte completo
 - [ ] `README.md` com as instruções de instalação e uso (por exemplo, `npm install` e `npm run dev`)
-- [ ] No README, a tabela com **Pedro, Amanda, Marlom e Erasmo** e os componentes de cada um (copiem a tabela da divisão acima)
+- [ ] No README, a tabela com **Pedro, Amanda, Marlon e Erasmo** e os componentes de cada um (copiem a tabela da divisão acima)
 - [ ] No README, prints das telas principais (as 5 páginas)
 - [ ] Deploy (opcional): Vercel, Netlify, Render etc.
 - [ ] Link do YouTube, se a apresentação for gravada

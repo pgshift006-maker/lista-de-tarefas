@@ -13,7 +13,7 @@ Aplicação web de lista de tarefas feita em **React.js com TypeScript**.
 |---|---|---|---|
 | Pedro | `Navbar`, `Footer` | Home, Sobre e as rotas | `useState` |
 | Amanda | `LoginForm`, `RotaProtegida` | Login | `useContext` |
-| Marlom | `ListaTarefas`, `ItemTarefa` | Tarefas | `useEffect`, `useMemo` |
+| Marlon | `ListaTarefas`, `ItemTarefa` | Tarefas | `useEffect`, `useMemo` |
 | Erasmo | `FormTarefa`, `ModalConfirmacao` | Nova tarefa | `useRef`, `useLocalStorage` |
 
 ## Como instalar e rodar
