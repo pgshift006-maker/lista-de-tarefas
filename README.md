@@ -3,9 +3,9 @@
 Trabalho final de **Front-end Frameworks** (Análise e Desenvolvimento de Sistemas).
 Aplicação web de lista de tarefas feita em **React.js com TypeScript**.
 
-> **Em construção.** O projeto React ainda vai ser criado neste repositório.
-> A divisão do trabalho, os requisitos e o roteiro da apresentação estão em
-> [trabalho-final-react-4-integrantes.md](trabalho-final-react-4-integrantes.md).
+> **Em construção.** A divisão do trabalho, os requisitos e o roteiro da
+> apresentação estão em
+> [trabalho-final-react-5-integrantes.md](trabalho-final-react-5-integrantes.md).
 
 ## Integrantes e componentes
 
@@ -15,6 +15,7 @@ Aplicação web de lista de tarefas feita em **React.js com TypeScript**.
 | Amanda | `LoginForm`, `RotaProtegida` | Login | `useContext` |
 | Marlon | `ListaTarefas`, `ItemTarefa` | Tarefas | `useEffect`, `useMemo` |
 | Erasmo | `FormTarefa`, `ModalConfirmacao` | Nova tarefa | `useRef`, `useLocalStorage` |
+| Marcos | `CartaoDetalhes`, `SeloStatus` | Detalhes da tarefa | `useParams`, `useNavigate` |
 
 ## Como instalar e rodar
 
