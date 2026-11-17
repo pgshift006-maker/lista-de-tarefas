@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ItemTarefa from "../components/ItemTarefa";
+import ListaTarefas from "../components/ListaTarefas";
 import type { Tarefa } from "../types/Tarefa";
 
 // Lista fixa para testar enquanto o useLocalStorage do Erasmo não fica pronto.
@@ -32,11 +32,7 @@ function Tarefas() {
             {carregando ? (
                 <p>Carregando...</p>
             ) : (
-                <ul>
-                    {tarefas.map((tarefa) => (
-                        <ItemTarefa key={tarefa.id} tarefa={tarefa} />
-                    ))}
-                </ul>
+                <ListaTarefas tarefas={tarefas} />
             )}
         </main>
     );
