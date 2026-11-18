@@ -109,3 +109,168 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+/* ---------- Estrutura (Pedro): Navbar, conteúdo e Footer ---------- */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-marca {
+  font-weight: 600;
+  color: var(--text-h);
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 4px;
+}
+
+.navbar-links a {
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.navbar-links a:hover {
+  color: var(--text-h);
+  background: var(--accent-bg);
+}
+
+/* O NavLink põe a classe "active" no link da página aberta. */
+.navbar-links a.active {
+  color: var(--accent);
+  background: var(--accent-bg);
+}
+
+/* O botão "Menu" só aparece em tela estreita. */
+.navbar-botao {
+  display: none;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-h);
+  font: inherit;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .navbar-botao {
+    display: inline-block;
+  }
+
+  /* Fechado: os links somem. Aberto (useState = true): viram uma coluna. */
+  .navbar-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links.aberto {
+    display: flex;
+  }
+}
+
+.conteudo {
+  flex: 1;
+  padding: 24px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px 24px;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+}
+
+/* ---------- Páginas Home e Sobre (Pedro) ---------- */
+
+.pagina-resumo {
+  max-width: 560px;
+  margin: 0 auto 32px;
+}
+
+.acoes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.botao {
+  padding: 10px 20px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--bg);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.botao-secundario {
+  background: transparent;
+  color: var(--accent);
+}
+
+.passos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.passos li {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.tecnologias {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 32px;
+  padding: 0;
+  list-style: none;
+}
+
+.tecnologias li {
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: var(--accent-bg);
+  color: var(--text-h);
+}
+
+.tabela-rolagem {
+  overflow-x: auto;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tabela th,
+.tabela td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tabela th {
+  color: var(--text-h);
+}
