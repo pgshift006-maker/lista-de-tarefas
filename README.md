@@ -19,7 +19,34 @@ Aplicação web de lista de tarefas feita em **React.js com TypeScript**.
 
 ## Como instalar e rodar
 
-_A preencher quando o projeto React for criado._
+Precisa do **Node.js 22.22 ou mais novo** (o React Router 8 não roda em versão anterior).
+
+```
+git clone https://github.com/pgshift006-maker/lista-de-tarefas.git
+cd lista-de-tarefas
+npm install
+npm run dev
+```
+
+Depois abra no navegador o endereço que aparece no terminal (normalmente
+`http://localhost:5173`).
+
+| Comando | O que faz |
+|---|---|
+| `npm run dev` | roda o projeto em modo de desenvolvimento |
+| `npm run build` | confere os tipos do TypeScript e gera a versão final na pasta `dist` |
+| `npm run lint` | procura erros de código com o ESLint |
+
+## Páginas
+
+| Endereço | Página |
+|---|---|
+| `/` | Home |
+| `/sobre` | Sobre |
+| `/login` | Login |
+| `/tarefas` | Tarefas (a lista) |
+| `/nova-tarefa` | Nova tarefa (o formulário) |
+| `/tarefas/:id` | Detalhes da tarefa (por exemplo, `/tarefas/3`) |
 
 ## Telas
 
