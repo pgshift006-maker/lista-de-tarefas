@@ -9,22 +9,17 @@ type FormTarefaProps = {
 function FormTarefa({ onSalvar, onCancelar }: FormTarefaProps) {
   const [titulo, setTitulo] = useState("");
   const [erro, setErro] = useState("");
-
-  //useRef guarda referência ao <input> para podermos chamar.focus().
-  //mudar o ref não trás nova renderização.
   const campoTitulo = useRef<HTMLInputElement>(null);
-  
-  //abrindo a página, o cursor já aparece no campo do título.
     useEffect(() => {
         campoTitulo.current?.focus();
     }, []);
 
     function enviar(evento: FormEvent<HTMLFormElement>) {
-        evento.preventDefault(); //evita recarregar a página
+        evento.preventDefault();
 
         if (titulo.trim() === "") {
             setErro("O título é obrigatório.");
-            campoTitulo.current?.focus(); //devolve o foco ao campo com erro
+            campoTitulo.current?.focus(); 
             return;
         }
 
