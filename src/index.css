@@ -274,3 +274,19 @@ code {
 .tabela th {
   color: var(--text-h);
 }
+
+/* "Sair" é um botão (faz uma ação), mas fica com a mesma cara dos links do menu. */
+.navbar-sair {
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.navbar-sair:hover {
+  color: var(--text-h);
+  background: var(--accent-bg);
+}
