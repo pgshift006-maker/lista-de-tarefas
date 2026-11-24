@@ -14,8 +14,8 @@ function useLocalStorage<T>(chave: string, valorInicial: T) {
     useEffect(() => {
         try {
             localStorage.setItem(chave, JSON.stringify(valor));
-        } catch {
-          
+        } catch (erro){
+            console.warn(`Não foi possível salvar "${chave}" no navegador.` erro); 
         }
     }, [chave, valor]);
 
