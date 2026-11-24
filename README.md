@@ -37,16 +37,29 @@ Depois abra no navegador o endereço que aparece no terminal (normalmente
 | `npm run build` | confere os tipos do TypeScript e gera a versão final na pasta `dist` |
 | `npm run lint` | procura erros de código com o ESLint |
 
+## Como usar
+
+1. Clique em **Entrar** no menu. O login é simulado: qualquer e-mail e senha
+   preenchidos funcionam, porque o trabalho não tem servidor.
+2. Em **Nova tarefa**, escreva o título e confirme. A tarefa fica salva no próprio
+   navegador (`localStorage`) e não some ao recarregar a página.
+3. Em **Tarefas**, filtre entre todas, pendentes e concluídas, e clique numa tarefa
+   para abrir os detalhes.
+4. **Sair** fica no menu. O login não é guardado: ao recarregar a página, é preciso
+   entrar de novo.
+
 ## Páginas
 
-| Endereço | Página |
-|---|---|
-| `/` | Home |
-| `/sobre` | Sobre |
-| `/login` | Login |
-| `/tarefas` | Tarefas (a lista) |
-| `/nova-tarefa` | Nova tarefa (o formulário) |
-| `/tarefas/:id` | Detalhes da tarefa (por exemplo, `/tarefas/3`) |
+| Endereço | Página | Precisa entrar? |
+|---|---|---|
+| `/` | Home | não |
+| `/sobre` | Sobre | não |
+| `/login` | Login | não |
+| `/tarefas` | Tarefas (a lista) | sim |
+| `/nova-tarefa` | Nova tarefa (o formulário) | sim |
+| `/tarefas/:id` | Detalhes da tarefa (por exemplo, `/tarefas/3`) | sim |
+
+Quem tenta abrir uma página fechada sem ter entrado é levado para `/login`.
 
 ## Telas
 
