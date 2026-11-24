@@ -1,18 +1,19 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
+import { useAuth } from "../context/useAuth";
 
 type LinkMenu = {
     caminho: string;
     texto: string;
 };
 
-// Os links ficam numa lista para não repetir o mesmo <NavLink> cinco vezes.
+// Os links ficam numa lista para não repetir o mesmo <NavLink> quatro vezes.
+// "Entrar" / "Sair" fica fora da lista porque muda conforme o login.
 const LINKS: LinkMenu[] = [
     { caminho: "/", texto: "Início" },
     { caminho: "/tarefas", texto: "Tarefas" },
     { caminho: "/nova-tarefa", texto: "Nova tarefa" },
     { caminho: "/sobre", texto: "Sobre" },
-    { caminho: "/login", texto: "Entrar" },
 ];
 
 function Navbar() {
@@ -20,8 +21,18 @@ function Navbar() {
     // onde os links ficam escondidos atrás do botão "Menu".
     const [menuAberto, setMenuAberto] = useState(false);
 
+    // Vem do contexto de login da Amanda: diz se o usuário entrou e permite sair.
+    const { isAuthenticated, logout } = useAuth();
+
     function fecharMenu() {
         setMenuAberto(false);
+    }
+
+    // Não precisa mandar para outra página: se a página aberta for protegida,
+    // a RotaProtegida da Amanda já leva para /login sozinha.
+    function sair() {
+        logout();
+        fecharMenu();
     }
 
     return (
@@ -56,6 +67,16 @@ function Navbar() {
                         {link.texto}
                     </NavLink>
                 ))}
+
+                {isAuthenticated ? (
+                    <button type="button" className="navbar-sair" onClick={sair}>
+                        Sair
+                    </button>
+                ) : (
+                    <NavLink to="/login" onClick={fecharMenu}>
+                        Entrar
+                    </NavLink>
+                )}
             </nav>
         </header>
     );
