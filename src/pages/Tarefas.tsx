@@ -1,39 +1,33 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import ListaTarefas from "../components/ListaTarefas";
+import useLocalStorage from "../hooks/useLocalStorage";
 import type { Tarefa } from "../types/Tarefa";
 
-// Lista fixa para testar enquanto o useLocalStorage do Erasmo não fica pronto.
-const TAREFAS_DE_EXEMPLO: Tarefa[] = [
-    { id: 1, titulo: "Estudar hooks do React", concluida: true },
-    { id: 2, titulo: "Fazer a página de tarefas", concluida: false },
-    { id: 3, titulo: "Ensaiar a apresentação", concluida: false },
-];
-
-// Simula a busca dos dados, como se viessem de uma API.
-function carregarTarefas(): Promise<Tarefa[]> {
-    return Promise.resolve(TAREFAS_DE_EXEMPLO);
-}
+// Mesma chave que o Erasmo usa na página Nova tarefa.
+const CHAVE_TAREFAS = "tarefas";
 
 function Tarefas() {
-    const [tarefas, setTarefas] = useState<Tarefa[]>([]);
-    const [carregando, setCarregando] = useState(true);
+    // As tarefas agora vêm do navegador (useLocalStorage do Erasmo),
+    // então não somem quando a página é recarregada.
+    const [tarefas, setTarefas] = useLocalStorage<Tarefa[]>(CHAVE_TAREFAS, []);
 
-    // Carrega as tarefas uma vez, quando a página abre.
+    // Recarrega a lista se as tarefas mudarem em outra aba
+    // (por exemplo, alguém cria uma tarefa na página Nova tarefa aberta em outra aba).
     useEffect(() => {
-        carregarTarefas().then((dados) => {
-            setTarefas(dados);
-            setCarregando(false);
-        });
-    }, []);
+        function aoMudarArmazenamento(evento: StorageEvent) {
+            if (evento.key === CHAVE_TAREFAS) {
+                setTarefas(evento.newValue ? JSON.parse(evento.newValue) : []);
+            }
+        }
+
+        window.addEventListener("storage", aoMudarArmazenamento);
+        return () => window.removeEventListener("storage", aoMudarArmazenamento);
+    }, [setTarefas]);
 
     return (
         <main>
             <h1>Tarefas</h1>
-            {carregando ? (
-                <p>Carregando...</p>
-            ) : (
-                <ListaTarefas tarefas={tarefas} />
-            )}
+            <ListaTarefas tarefas={tarefas} />
         </main>
     );
 }
