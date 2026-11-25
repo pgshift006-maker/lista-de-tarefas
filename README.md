@@ -6,6 +6,12 @@ Aplicação web de lista de tarefas feita em **React.js com TypeScript**.
 A divisão do trabalho, os requisitos e o roteiro da apresentação estão em
 [trabalho-final-react-5-integrantes.md](trabalho-final-react-5-integrantes.md).
 
+## Vídeo da apresentação
+
+[apresentacao_lista_de_tarefas.mp4](docs/apresentacao_lista_de_tarefas.mp4) (13min19), com os cinco
+integrantes na ordem: Pedro, Amanda, Marlon, Erasmo e Marcos. Também no
+[Google Drive](https://drive.google.com/file/d/1gTNfeFaLsQH6M1jCC25I-mvN0tb3HrKL/view).
+
 ## Integrantes e componentes
 
 | Integrante | Componentes | Página(s) | Hooks |
