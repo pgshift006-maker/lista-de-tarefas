@@ -2,9 +2,11 @@
 import { useState } from "react";
 import { useAuth } from "../context/useAuth";
 import type { SubmitEvent } from "react";
+import { useNavigate } from "react-router";
 
 function LoginForm() {
   const { login } = useAuth();
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
@@ -19,6 +21,7 @@ function LoginForm() {
     }
 
     login();
+    navigate("/tarefas");
     setErro("");
   }
 
