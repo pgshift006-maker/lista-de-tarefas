@@ -3,9 +3,8 @@
 Trabalho final de **Front-end Frameworks** (Análise e Desenvolvimento de Sistemas).
 Aplicação web de lista de tarefas feita em **React.js com TypeScript**.
 
-> **Em construção.** A divisão do trabalho, os requisitos e o roteiro da
-> apresentação estão em
-> [trabalho-final-react-5-integrantes.md](trabalho-final-react-5-integrantes.md).
+A divisão do trabalho, os requisitos e o roteiro da apresentação estão em
+[trabalho-final-react-5-integrantes.md](trabalho-final-react-5-integrantes.md).
 
 ## Integrantes e componentes
 
@@ -63,4 +62,26 @@ Quem tenta abrir uma página fechada sem ter entrado é levado para `/login`.
 
 ## Telas
 
-_Os prints das telas principais entram aqui quando o sistema estiver pronto._
+**Home** (`/`)
+
+![Página inicial](docs/telas/1-inicio.png)
+
+**Sobre** (`/sobre`)
+
+![Página Sobre, com as tecnologias e quem fez cada parte](docs/telas/2-sobre.png)
+
+**Login** (`/login`)
+
+![Página de login](docs/telas/3-login.png)
+
+**Tarefas** (`/tarefas`)
+
+![Lista de tarefas com o contador e os filtros](docs/telas/4-tarefas.png)
+
+**Nova tarefa** (`/nova-tarefa`)
+
+![Formulário de nova tarefa](docs/telas/5-nova-tarefa.png)
+
+**Detalhes da tarefa** (`/tarefas/1`)
+
+![Detalhes de uma tarefa, com o selo de status e os botões](docs/telas/6-detalhes.png)
